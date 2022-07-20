@@ -1,0 +1,76 @@
+<html>
+    <head>
+       <style>
+        body {
+    padding: 0px;
+    margin: 0px;
+    background-color: rgb(186, 186, 222);
+          }
+          .hedear{
+            background-color: rgb(37, 6, 67);
+        width: auto;
+        height: 50px;
+        border: 1px rgb(11, 8, 14) solid;
+          }
+          .hedear p{
+            text-align: center;
+            color: white;
+            font-size: 20px;
+            text-transform: capitalize;
+          }
+          h1{
+            text-align: center;
+            color: rgb(61, 27, 92);
+            font-size: 100px;
+            text-transform: capitalize;
+          }
+          .div{
+             
+              text-align: center;
+          }
+          .news h4{
+            color: rgb(37, 6, 67);
+            font-size: 20px;
+          }
+          .news p{
+            color: rgb(87, 48, 92);
+            font-size: 12px;
+            
+            
+          }
+          .news a{
+            text-decoration: none;
+            text-transform: capitalize;
+                margin: 15px 15px;
+    
+                padding: 10px 5px;
+                background-color: rgb(82, 63, 99);
+                color: whitesmoke;
+                border-radius: 10px;
+          }
+       </style>
+    </head>
+    <body> 
+        <div class="hedear">
+            <p>welcom</p>
+        </div> 
+        <h1>The News App </h1>
+        <div class="div">
+            <div class="part1">
+                {{#each data}}
+
+                <div class="part1div">
+                    <img src="{{this.urlToImage}}" style="width: 50%; margin-top:20px ;">
+                    <div class="news">
+                        <h4>{{this.title}}</h4>
+                        
+                        <p>{{this.description}}</p>
+                        {{!-- <a>{{this.url}}</a> --}}
+                        <a href="{{this.url}}"> go to the website</a>
+                    </div>
+                </div>
+                {{/each}}
+       
+        <script src="js/new.js"></script>
+    </body>
+</html>
